@@ -15,7 +15,6 @@ if [ "$OPLOG_SIZE" != "" ]; then
     cmd="$cmd --oplogSize $OPLOG_SIZE"
 fi
 
-cmd="$cmd -f /etc/mongod.conf"
 $cmd &
 
 if [ ! -f /data/db/.mongodb_password_set ]; then
